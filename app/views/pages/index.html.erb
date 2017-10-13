@@ -1,5 +1,21 @@
-<% @pages.each do |page| %>
-
-  <p><%= page.title %></p>
-  <p><%= page.slug %></p>
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
 <% end %>
+<!-- Jumbotron -->
+<div class="jumbotron">
+	<h1>Maciej Sypniewski!</h1>
+	<p class="lead">Hire Me!!!<br />
+	Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+	<a class="btn btn-large btn-success" href="#">Get started today</a>
+</div><!-- End of Jumbotron -->
+<div class="row-fluid">
+  <div class="span8">
+    <h3>Sites</h3>
+    <% @pages.each do |page| %>
+      <p><%= link_to "#{page.title} -- ", page_path(page) %>-<%= page.slug %></p>
+    <% end %>
+  </div>
+  <div class="span4">
+  	<%= render "shared/twitter" %>
+  </div>
+</div>

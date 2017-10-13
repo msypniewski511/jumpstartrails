@@ -1,2 +1,15 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<%
+meta title: @post.title,
+description: @post.blurb,
+keywords: %w(rails ruby on rails Rails jump start rails)
+%>
+<p>
+  <strong>Title: <h3><%= @post.title %></h3></strong>
+</p>
+<p>
+  <p class='pull-left'><%= image_tag @post.image_url %></p>
+</p>
+<p>
+  <%= @post.content.html_safe %>
+</p>
+<%= link_to 'Back', posts_index_path %>

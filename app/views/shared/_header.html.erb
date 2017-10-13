@@ -1,0 +1,16 @@
+<div class="masthead">
+  <h3 class="muted">Jump Start Rails</h3>
+  <div class="navbar">
+    <div class="navbar-inner">
+    	<div class="container">
+    		<ul class="nav">
+    			<%= nav_link 'Home', root_path %>
+    			<%= nav_link 'Blog', posts_index_path %>
+    			<%= nav_link 'About', about_path %>
+          <%= nav_link 'Portfolio', portfolio_path %>
+    			<%= nav_link 'Contact', page_path(Page.find_by_title('contact').id) %>
+    		</ul>
+    	</div>
+    </div>
+  </div><!-- /.navbar -->
+</div>

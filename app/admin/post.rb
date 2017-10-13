@@ -2,7 +2,7 @@ ActiveAdmin.register Post do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :category_id, :title, :slug, :blurb, :content
+  permit_params :category_id, :title, :slug, :blurb, :content, :image
   scope :rails
   index do
   	column :title
@@ -12,7 +12,7 @@ ActiveAdmin.register Post do
   	actions
   end
 
-  form :html => { :enctype => "multipart/form-data" } do |f|
+  form do |f|
 	f.inputs 'Details' do
 	  f.input :title
 	  f.input :slug
@@ -21,7 +21,7 @@ ActiveAdmin.register Post do
 	  f.input :content, :as => :text
     end
     f.inputs 'Images' do
-	  f.input :image, :label => 'Post image', :as => :file
+	    f.input :image, :label => 'Post image', :as => :file
     end
     f.actions
   end

@@ -3,21 +3,15 @@ class PagesController < ApplicationController
   	@pages = Page.all
   end
   def main
-    @page =Page.where(slug: 'main-layout').first
+    @page =Page.last
   end
 
   def about
-  	@page =Page.where(slug: 'about-jump-start-rails').first
+  	@page =Page.first
   end
-
-  def rout
-  	@page = Page.where(slug: 'routes-as-array').first
+  def show
+  	@page = Page.find(params[:id])
   end
-
-  def table
-  	@page = Page.where(slug: 'tabele-css').first
-  end
-
-  def contact
+  def portfolio
   end
 end

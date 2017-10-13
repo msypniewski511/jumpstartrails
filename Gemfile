@@ -13,9 +13,10 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5.0.0'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery'
+gem 'jquery-turbolinks'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'activeadmin'
 
@@ -24,6 +25,13 @@ gem 'devise'
 gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick' # For different versions of an image
+gem "fog"
+gem 'friendly_id', '~> 5.2.1' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem 'metamagic'
+
+gem 'bootstrap-sass'
 
 
 

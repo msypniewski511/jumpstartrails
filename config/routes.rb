@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'posts/index'
-
-  get 'posts/show'
+  get 'posts/show/:id', to: 'posts#show'
+  get 'portfolio', to: 'pages#portfolio'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
